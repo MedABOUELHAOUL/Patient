@@ -83,7 +83,6 @@ public class PatientController {
         model.addAttribute("Patiented", patient);
         model.addAttribute("page", page);
         model.addAttribute("keyword", keyword);
-
         return "editpatients";
     }
 
