@@ -31,7 +31,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-        httpSecurity.formLogin().loginPage("/login").permitAll();
+        httpSecurity.formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll();
         httpSecurity.rememberMe();
         httpSecurity.authorizeHttpRequests().requestMatchers("/webjars/**").permitAll();
         httpSecurity.authorizeHttpRequests().requestMatchers("/user/**").hasRole("USER");

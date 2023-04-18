@@ -17,7 +17,7 @@ public class Tp3Application {
     public static void main(String[] args) {
             SpringApplication.run(Tp3Application.class, args);
     }
-     //@Bean
+     @Bean
     CommandLineRunner start(PatientRepository patientRepository){
          return args ->{
 
